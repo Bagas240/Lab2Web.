@@ -105,7 +105,3 @@ Kelas : I251D
 - `<audio controls>`: Menyajikan pemutar media suara untuk memutar berkas `audio.mp3` dengan dukungan format `audio/mpeg`.
 - `<video width="320" height="480" controls>`: Menyajikan pemutar video berukuran lebar 320 piksel dan tinggi 480 piksel untuk memutar berkas `video.mp4` (`type="video/mp4"`).
 - `controls`: Atribut wajib untuk memunculkan tombol kontrol interaktif bawaan browser (*play*, *pause*, *volume*, *timeline*, dan mode layar penuh).
-- *Fallback text*: Pesan teks yang hanya muncul jika browser pengguna tidak mendukung pemutaran media HTML5.
-
----
-
