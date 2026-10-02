@@ -1,6 +1,8 @@
 # Laporan Praktikum 2: Pemrograman Web - HTML Lanjutan
 
-Dokumentasi ini berisi penjelasan menyeluruh dan detail mengenai baris demi baris kode program HTML Lanjutan pada Praktikum 2, mencakup pengolahan Tabel, Formulir Registrasi, Validasi Form, Layout Semantic HTML5, serta Elemen Multimedia.
+Nama : Bagas Arya Ramadhan 
+Nim : 312510328
+Kelas : I251D
 
 ---
 
@@ -8,29 +10,7 @@ Dokumentasi ini berisi penjelasan menyeluruh dan detail mengenai baris demi bari
 
 ### 1. Struktur Dokumen Pertama & Tabel Data Mahasiswa
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Lanjutan</title>
-</head>
-<body>
-
-    <h1>Data Mahasiswa</h1>
-    <table border="1">
-        <tr><th>NIM</th><th>Nama</th><th>Program Studi</th></tr>
-        <tr><td>31241001</td><td>Andi</td><td>Teknik Informatika</td></tr>
-        <tr><td>31241002</td><td>Budi</td><td>Teknik Informatika</td></tr>
-    </table>
-```
-
-- `<!DOCTYPE html>`: Deklarasi yang memberi tahu browser bahwa dokumen ini menggunakan standar HTML5.
-- `<html lang="en">`: Elemen utama (root) dokumen HTML dengan pengaturan bahasa Inggris.
-- `<head>`: Bagian penampung metadata dokumen yang tidak tampil di area konten browser.
-- `<meta charset="UTF-8">`: Mengatur pengodean karakter menjadi UTF-8 agar mendukung berbagai simbol standar.
-- `<meta name="viewport" content="width=device-width, initial-scale=1.0">`: Mengatur agar tampilan web bersifat responsif pada perangkat seluler.
+![image alt](https://github.com/Bagas240/Lab2Web./blob/readme/media/Screenshot%202026-10-02%20091700.png?raw=true)
 - `<title>HTML Lanjutan</title>`: Menentukan judul halaman yang muncul pada tab browser.
 - `<body>`: Wadah seluruh elemen visual yang ditampilkan kepada pengguna.
 - `<h1>Data Mahasiswa</h1>`: Judul utama bagian tabel data mahasiswa.
@@ -45,17 +25,7 @@ Dokumentasi ini berisi penjelasan menyeluruh dan detail mengenai baris demi bari
 
 ### 2. Tabel Nilai Praktikum Berstruktur (`<thead>`, `<tbody>`, `<tfoot>`)
 
-```html
-<table border="1">
-    <caption>Nilai Praktikum</caption>
-    <thead><tr><th>No</th><th>Nilai</th></tr></thead>
-    <tbody>
-        <tr><td>1</td><td>Andi</td><td>85</td></tr>
-        <tr><td>2</td><td>Budi</td><td>90</td></tr>
-    </tbody>
-    <tfoot><tr><td colspan="2">Rata-rata</td><td>87.5</td></tr></tfoot>
-</table>
-```
+![image alt](https://github.com/Bagas240/Lab2Web./blob/readme/media/Screenshot%202026-10-02%20093001.png?raw=true)
 
 - `<caption>Nilai Praktikum</caption>`: Judul resmi yang tampil menempel di atas tabel.
 - `<thead>`: Menandai kelompok header tabel.
@@ -69,21 +39,7 @@ Dokumentasi ini berisi penjelasan menyeluruh dan detail mengenai baris demi bari
 
 ### 3. Formulir Registrasi Mahasiswa
 
-```html
-<h1>Form Registrasi Mahasiswa</h1>
-<form>
-    <label for="nama">Nama Lengkap</label><br>
-    <input type="text" id="nama" name="nama"><br><br>
-    <label for="email">Email</label><br>
-    <input type="email" id="email" name="email"><br><br>
-    <label for="password">Password</label><br>
-    <input type="password" id="password" name="password"><br><br>
-    <label for="tanggal">Tanggal Lahir</label><br>
-    <input type="date" id="tanggal" name="tanggal"><br><br>
-    <button type="submit">Daftar</button>
-    <button type="reset">Reset</button>
-</form>
-```
+![image alt](https://github.com/Bagas240/Lab2Web./blob/readme/media/Screenshot%202026-10-02%20093018.png?raw=true)
 
 - `<form>`: Container utama untuk mengumpulkan masukan dari pengguna.
 - `<label for="...">`: Menghubungkan teks keterangan dengan elemen input melalui atribut `id`.
@@ -98,21 +54,7 @@ Dokumentasi ini berisi penjelasan menyeluruh dan detail mengenai baris demi bari
 
 ### 4. Input Pilihan: Radio Button & Checkbox
 
-```html
-<h2>Jenis Kelamin</h2>
-<input type="radio" id="laki" name="jk" value="L">
-<label for="laki">Laki-laki</label>
-<input type="radio" id="perempuan" name="jk" value="P">
-<label for="perempuan">Perempuan</label>
-
-<h2>Keahlian</h2>
-<input type="checkbox" id="html" name="skill" value="HTML">
-<label for="html">HTML</label>
-<input type="checkbox" id="css" name="skill" value="CSS">
-<label for="css">CSS</label>
-<input type="checkbox" id="js" name="skill" value="JavaScript">
-<label for="js">JavaScript</label>
-```
+![image alt](https://github.com/Bagas240/Lab2Web./blob/readme/media/Screenshot%202026-10-02%20093037.png?raw=true)
 
 - `<input type="radio">`: Pilihan opsi tunggal. Atribut `name="jk"` yang bernilai sama mengelompokkan `Laki-laki` (`value="L"`) dan `Perempuan` (`value="P"`), sehingga pengguna hanya bisa memilih salah satu.
 - `<input type="checkbox">`: Pilihan opsi ganda. Pengguna dapat mencentang lebih dari satu pilihan keahlian (`HTML`, `CSS`, `JavaScript`) secara bersamaan.
@@ -121,18 +63,7 @@ Dokumentasi ini berisi penjelasan menyeluruh dan detail mengenai baris demi bari
 
 ### 5. Menu Dropdown (`<select>`) dan Area Teks (`<textarea>`)
 
-```html
-<label for="prodi">Program Studi</label>
-<select id="prodi" name="prodi">
-    <option value="">>-- Pilih Prodi --<</option>
-    <option value="si">Teknik Komputer</option>
-    <option value="tk">Sistem Informasi</option>
-</select>
-
-<br><br>
-<label for="alamat">Alamat</label><br>
-<textarea id="alamat" name="alamat" rows="5" cols="40"></textarea>
-```
+![image alt](https://github.com/Bagas240/Lab2Web./blob/readme/media/Screenshot%202026-10-02%20093101.png?raw=true)
 
 - `<select id="prodi" name="prodi">`: Membuat menu pilihan gantung (*dropdown*).
 - `<option>`: Menentukan daftar pilihan prodi yang tersedia (`Teknik Komputer` dengan value `si` dan `Sistem Informasi` dengan value `tk`).
@@ -144,20 +75,7 @@ Dokumentasi ini berisi penjelasan menyeluruh dan detail mengenai baris demi bari
 
 ### 6. Formulir Validasi Dasar HTML5
 
-```html
-<form>
-    <label for="nama">Nama</label>
-    <input type="text" id="nama" name="nama" required minlength="3">
-
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="umur">Umur</label>
-    <input type="number" id="umur" name="umur" min="17" max="60" required>
-
-    <button type="submit">Kirim</button>
-</form>
-```
+![image alt](https://github.com/Bagas240/Lab2Web./blob/readme/media/Screenshot%202026-10-02%20093124.png?raw=true)
 
 - `required`: Atribut penanda bahwa input `Nama`, `Email`, dan `Umur` wajib diisi sebelum form dapat dikirim.
 - `minlength="3"`: Memvalidasi bahwa jumlah karakter nama yang dimasukkan minimal 3 huruf.
@@ -168,33 +86,7 @@ Dokumentasi ini berisi penjelasan menyeluruh dan detail mengenai baris demi bari
 
 ### 7. Structural Semantic HTML5 (Dokumen Kedua)
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Mahasiswa</title>
-</head>
-<body>
-    <header><h1>Portal Mahasiswa</h1></header>
-    <nav>
-        <a href="#">Beranda</a> |
-        <a href="#">Profil</a> |
-        <a href="#">Kontak</a>
-    </nav>
-<main>
-    <section>
-        <h2>Informasi Akademik</h2>
-        <article>
-            <h3>Praktikum HTML Lanjutan</h3>
-            <p>Mahasiswa mempelajari tabel. form, semantic HTML, multimedia, dan validasi.</p>
-        </article>
-    </section>
-    <aside>Informasi tambahan mahasiswa.</aside>
-</main>
-<footer><p>&copy; 2026 Tekmik Informatika</p></footer>
-```
+![image alt](https://github.com/Bagas240/Lab2Web./blob/readme/media/Screenshot%202026-10-02%20093144.png?raw=true)
 
 - `<header>`: Menandai area kepala halaman yang berisi judul utama `Portal Mahasiswa`.
 - `<nav>`: Area penampung tautan navigasi situs (`Beranda | Profil | Kontak`).
@@ -208,21 +100,7 @@ Dokumentasi ini berisi penjelasan menyeluruh dan detail mengenai baris demi bari
 
 ### 8. Elemen Pemutar Multimedia
 
-```html
-<h2>Audio</h2>
-<audio controls>
-    <source src="audio.mp3" type="audio/mpeg">
-    Browser tidak mendukung audio.
-</audio>
-
-<h2>Video</h2>
-<video width="320" height="480" controls>
-    <source src="video.mp4" type="video/mp4">
-    Browser tidak mendukung video.  
-</video>
-</body>
-</html>
-```
+![iamge alt](https://github.com/Bagas240/Lab2Web./blob/readme/media/Screenshot%202026-10-02%20093157.png?raw=true)
 
 - `<audio controls>`: Menyajikan pemutar media suara untuk memutar berkas `audio.mp3` dengan dukungan format `audio/mpeg`.
 - `<video width="320" height="480" controls>`: Menyajikan pemutar video berukuran lebar 320 piksel dan tinggi 480 piksel untuk memutar berkas `video.mp4` (`type="video/mp4"`).
@@ -231,10 +109,3 @@ Dokumentasi ini berisi penjelasan menyeluruh dan detail mengenai baris demi bari
 
 ---
 
-## Ringkasan Perubahan & Tampilan Penting pada Browser
-
-1. **Tabel Data & Nilai**: Tampil sebagai kisi-kisi berdinding tebal 1px. Judul kolom berformat tebal di tengah, serta terdapat sel gabungan `colspan` di bagian footer rata-rata.
-2. **Form Registrasi & Pilihan**: Teks password tersembunyi sebagai titik hitam, tanggal lahir memiliki pemilih kalender interaktif, radio button hanya bisa dipilih salah satu, dan checkbox bisa dicentang ganda.
-3. **Hasil Uji Validasi**: Jika tombol *Kirim* diklik saat form kosong atau saat umur diisi kurang dari 17, browser otomatis menolak pengiriman data dan memunculkan *pop-up* balok pesan peringatan.
-4. **Layout Semantic**: Struktur web tersusun secara hirarki rapi dari atas ke bawah (Header, Navigasi, Konten Utama, Sidebar, dan Footer).
-5. **Kontrol Multimedia**: Menampilkan pemutar audio dan video interaktif yang siap diputar langsung dari halaman web.
